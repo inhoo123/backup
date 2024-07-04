@@ -1,0 +1,107 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .dchead {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+    }
+    .dchead a {
+        color: white;
+        text-decoration: none;
+    }
+    .dchead a:hover {
+        text-decoration: underline;
+    }
+    .dchead .links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .dchead .logo-search {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .dchead .logo img {
+        border: 1px solid black;
+        padding: 7px;
+        width: 150px;
+        background-color: white;
+        border-radius: 32px;
+    }
+    .dchead .search-bar input {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+    }
+    .gnb_bar {
+        background-color: #555;
+        padding: 10px 0;
+    }
+    .gnb_bar .container {
+        display: flex;
+        justify-content: left;
+        padding: 0 20px;
+    }
+    .gnb_bar a {
+        color: white;
+        font-weight: 550;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+    .gnb_bar a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="dchead">
+	<!-- links -->
+	<div class="links">
+		<c:choose>
+			<c:when test="${sessionScope.authUser == null}">
+				<div>
+					<a href="${pageContext.servletContext.contextPath}/login">로그인 <small>..</small></a>
+				</div>
+			</c:when>
+			<c:otherwise>
+				<div>
+					<a href="${pageContext.servletContext.contextPath}/login">${sessionScope.authUser.name}님</a> 
+					<a href="${pageContext.servletContext.contextPath}/login">로그아웃</a>
+				</div>
+			</c:otherwise>
+		</c:choose>
+	</div>
+
+	<!-- logo & searchbar -->
+	<div class="logo-search">
+		<div class="logo">
+			<a href="${pageContext.servletContext.contextPath}/index">
+				<img src="${pageContext.servletContext.contextPath}/image/inside.png" />
+			</a>
+		</div>
+		<div class="search-bar">
+			<form action="${pageContext.servletContext.contextPath}/search/view">
+				<input type="text" placeholder="갤러리 & 통합검색" name="q" value="${param.q}" />
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="gnb_bar">
+	<div class="container">
+		<a href="${pageContext.servletContext.contextPath}/list/category?category=운동">운동</a>
+		<a href="${pageContext.servletContext.contextPath}/list/category?category=유머">&emsp;&emsp;유머</a>
+		<a href="${pageContext.servletContext.contextPath}/list/category?category=축구">&emsp;&emsp;축구</a>
+		<a href="${pageContext.servletContext.contextPath}/list/category?category=자유글">&emsp;&emsp;자유글</a>
+	</div>
+</div>

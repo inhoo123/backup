@@ -1,0 +1,28 @@
+1719274086307	Delete element
+1719274090353	Delete element
+1719274211671	Move 'css' to 'webapp'
+1719274213050	Move 'img' to 'webapp'
+1719274214381	Move 'lib' to 'webapp'
+1719274230847	Move 'lib' to 'WEB-INF'
+1719281473462	Rename type 'UsersDao'
+1719281480396	Rename type 'PostsDao'
+1719281488336	Rename type 'CommentsDao'
+1719290535146	Delete element
+1719290644845	Rename type 'ListController'
+1719292113461	Rename resource 'PostsListController.java'
+1719297215755	Delete element
+1719297996805	Delete element
+1719362731346	Rename compilation unit 'CategorysListController.java'
+1719365371789	Rename compilation unit 'CategoryListController.java'
+1719365386695	Rename type 'ListController'
+1719365409637	Rename type 'WriteController'
+1719365414943	Rename type 'WriteHandleController'
+1719374556115	Delete element
+1719375216947	Rename resource 'post-search-result.jsp'
+1719375880540	Rename resource 'posts-search-result.jsp'
+1719376048012	Rename type 'SearchCountroller'
+1719381117724	Delete element
+1719455102243	Delete element
+1719459385058	Delete element
+1719546406757	Rename type 'UdateHandle'
+1719546770391	Rename resource 'coments'

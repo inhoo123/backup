@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>book</title>
+</head>
+<body>
+	<h2>책 정보 입력</h2>
+
+	<form action="<%=application.getContextPath() %>/book/book-result.jsp">
+		<p>
+			 <input type="text" style="text-align: center" name="title" placeholder="작성자..." />
+		</p>
+		<p>
+			 <input type="text" style="text-align: center" name="author" placeholder="저자.."/>
+		</p>
+		<p>
+			 <input type="text" style="text-align: center" name="publisher" placeholder="출판사.."/>
+		</p>
+		<p>
+			 <input type="text" style="text-align: center" name="status" placeholder="최상/상/중"/>
+		</p>
+		<p>
+			 <input type="number" style="text-align: center;" name="price" placeholder="00000" />
+		</p>
+		<p>
+			 <input type="number" style="text-align: center;" name="discountPrice" placeholder="00000" />
+		</p>
+		<p>
+			 <input type="number" style="text-align: center;" name="discountRate" placeholder="00" />
+		</p>
+			<button type="submit">결과보기</button>
+			<button type="reset">초기화</button>
+
+	</form>
+</body>
+</html>

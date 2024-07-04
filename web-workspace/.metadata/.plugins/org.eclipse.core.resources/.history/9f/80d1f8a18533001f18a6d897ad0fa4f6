@@ -1,0 +1,16 @@
+package model.vo;
+
+import java.sql.Date;
+
+public class Comment {
+	int postId;
+	String body;
+	Date writedAt;
+	int likes;
+	int dislikes;
+	String writerId;
+	String password;
+
+	
+	
+}

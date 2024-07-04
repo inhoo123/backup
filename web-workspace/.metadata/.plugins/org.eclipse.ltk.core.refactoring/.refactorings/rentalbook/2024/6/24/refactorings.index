@@ -1,0 +1,15 @@
+1717986722268	Move 'drop.jsp' to 'mylib'
+1717998031944	Rename resource 'delete.jsp'
+1718003619864	Rename resource 'update.jsp'
+1718067900750	Rename type 'Favorite'
+1718067919896	Delete element
+1718082041506	Move 'favorites.jsp' to 'mylib'
+1718082584183	Rename resource 'description.jsp'
+1718082605906	Rename resource 'Books.java'
+1718082721087	Rename resource 'BookDao.java'
+1718082752170	Rename resource 'BooksDao.java'
+1718082873461	Rename resource 'books'
+1718088264921	Delete element
+1718152503355	Copy files
+1718331502455	Move 'index.jsp' to 'view'
+1718331718431	Rename resource 'login.jsp'

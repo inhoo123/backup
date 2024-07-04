@@ -1,0 +1,84 @@
+package model.vo;
+
+import java.sql.Date;
+
+public class Comment {
+	int postId;
+	String body;
+	Date writedAt;
+	int likes;
+	int dislikes;
+	String writerId;
+	String password;
+
+	public int getPostId() {
+		return postId;
+	}
+
+	public void setPostId(int postId) {
+		this.postId = postId;
+	}
+
+	public String getBody() {
+		return body;
+	}
+
+	public void setBody(String body) {
+		this.body = body;
+	}
+
+	public Date getWritedAt() {
+		return writedAt;
+	}
+
+	public void setWritedAt(Date writedAt) {
+		this.writedAt = writedAt;
+	}
+
+	public int getLikes() {
+		return likes;
+	}
+
+	public void setLikes(int likes) {
+		this.likes = likes;
+	}
+
+	public int getDislikes() {
+		return dislikes;
+	}
+
+	public void setDislikes(int dislikes) {
+		this.dislikes = dislikes;
+	}
+
+	public String getWriterId() {
+		return writerId;
+	}
+
+	public void setWriterId(String writerId) {
+		this.writerId = writerId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Comment(int postId, String body, Date writedAt, int likes, int dislikes, String writerId, String password) {
+		this.postId = postId;
+		this.body = body;
+		this.writedAt = writedAt;
+		this.likes = likes;
+		this.dislikes = dislikes;
+		this.writerId = writerId;
+		this.password = password;
+	}
+
+	public Comment() {
+		super();
+	}
+
+}

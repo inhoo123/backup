@@ -1,0 +1,84 @@
+package model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import model.vo.Comment;
+import oracle.jdbc.datasource.impl.OracleDataSource;
+
+public class CommentDao {
+	//=========================저장===========================================================================================
+		public boolean save(Comment newComment) throws Exception {
+			OracleDataSource ods = new OracleDataSource();
+			ods.setURL("jdbc:oracle:thin:@//3.36.66.249:1521/xe");
+			ods.setUser("community_inside");
+			ods.setPassword("oracle");
+
+			try (Connection conn = ods.getConnection()) {
+
+				PreparedStatement stmt = conn.prepareStatement("INSERT INTO USERS VALUES(?,?,?,?,?,?,?,?,?)");
+				
+				stmt.setString(1, newComment.getBody());
+				stmt.setDate(2, newComment.getWritedAt());
+				stmt.setInt(3, newComment.getLikes());
+				stmt.setInt(4, newComment.getDislikes());
+				stmt.setString(5, newComment.getWriterId());
+				stmt.setString(6, newComment.getPassword());
+			
+
+				int r = stmt.executeUpdate();
+				return r == 1 ? true : false;
+			} catch (Exception e) {
+				e.printStackTrace();
+				return false;
+			}
+
+		}
+		//=================================NO로찾기=========================================
+		public boolean findByNo(int no) throws SQLException {
+			OracleDataSource ods = new OracleDataSource();
+			ods.setURL("jdbc:oracle:thin:@//3.36.66.249:1521/xe");
+			ods.setUser("community_inside");
+			ods.setPassword("oracle");
+
+			try (Connection conn = ods.getConnection()) {
+
+				PreparedStatement stmt = conn.prepareStatement("SELECT * FROM COMMENTS WHERE NO=?");
+				stmt.setInt(1, no);
+
+				int r = stmt.executeUpdate();
+
+				return r == 1 ? true : false;
+			} catch (Exception e) {
+				System.out.println(e);
+				return false;
+			}
+
+		}
+		
+		//========================삭제================================================================================================
+		
+
+		public boolean deleteByNo(int no) throws SQLException {
+			OracleDataSource ods = new OracleDataSource();
+			ods.setURL("jdbc:oracle:thin:@//3.36.66.249:1521/xe");
+			ods.setUser("community_inside");
+			ods.setPassword("oracle");
+
+			try (Connection conn = ods.getConnection()) {
+
+				PreparedStatement stmt = conn.prepareStatement("DELETE FROM COMMENTS WHERE PASSWORD=?");
+				stmt.setInt(1, no);
+
+				int r = stmt.executeUpdate();
+
+				return r == 1 ? true : false;
+			} catch (Exception e) {
+				System.out.println(e);
+				return false;
+			}
+
+		}
+	//======================================================================	
+}

@@ -1,0 +1,59 @@
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="oracle.jdbc.datasource.impl.OracleDataSource"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+String title = request.getParameter("title");
+String author = request.getParameter("author");
+String publisher = request.getParameter("publisher");
+String status = request.getParameter("status");
+String price = request.getParameter("price");
+String discountPrice = request.getParameter("discountPrice");
+String discountRate  = request.getParameter("discountRate");
+int Iprice = Integer.parseInt(price);
+int IdiscountPrice = Integer.parseInt(discountPrice);
+int IdiscountRate = Integer.parseInt(discountRate);
+
+OracleDataSource ods = new OracleDataSource();
+ods.setURL("jdbc:oracle:thin:@//3.36.66.249:1521/xe");
+ods.setUser("playground");
+ods.setPassword("oracle");
+
+Connection conn = ods.getConnection();
+
+	PreparedStatement stmt = 
+conn.prepareStatement("insert into book(title,author,publisher,status,price,discountPrice,discountRate)values(?,?,?,?,?,?,?)");
+stmt.setString(1, title);
+stmt.setString(2, author);
+stmt.setString(3, publisher);
+stmt.setString(4, status);
+stmt.setInt(5, Iprice);
+stmt.setInt(6, IdiscountPrice);
+stmt.setDouble(7, IdiscountRate);
+
+int cnt = stmt.executeUpdate();
+
+
+conn.close();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>책 정보등록</title>
+</head>
+<body>
+	<h2>책 등록</h2>
+	<%
+	if (cnt == 1) {
+	%>
+	<p>당신의 소중한 의견이 잘 저장되었습니다.</p>
+	<%
+	} else {
+	%><p>등록안됨</p>
+	<%
+	}
+	%>
+</body>
+</html>

@@ -1,0 +1,41 @@
+package controller.comments;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import model.dao.CommentDao;
+import model.dao.PostDao;
+import model.vo.Comment;
+import model.vo.Post;
+
+@WebServlet
+public class UdateHandle extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		try {
+			
+			String body = req.getParameter("body");
+			int no = Integer.parseInt(req.getParameter("no"));
+			// (int no, String writerId, String title, String body, Date writedAt, int readCnt) // 
+			Comment one = new Comment();
+			one.setBody(body);
+			one.setNo(no);
+			
+		  CommentDao commentDao = new CommentDao();
+			
+			boolean r;
+				r = commentDao.update(one);
+			if (r) {
+				response.sendRedirect(request.getContextPath()+"/posts/view?no="+no);	
+			} else {
+				
+		}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

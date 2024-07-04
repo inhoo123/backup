@@ -1,0 +1,27 @@
+1718588455348	Move compilation unit
+1718590294781	Rename resource 'new'
+1718590674791	Rename resource 'new.jsp'
+1718590845155	Rename type 'EventsNewController'
+1718592182969	Delete element
+1718597578939	Delete element
+1718599897745	Rename type 'EventsNextController'
+1718602026947	Rename resource 'Paticipant.java'
+1718602034759	Rename resource 'PaticipantDao.java'
+1718683631386	Move compilation unit
+1718684918296	Move 'design.jsp' to 'view'
+1718684925395	Move 'design.jsp' to 'events'
+1718686573912	Delete element
+1718690846354	Copy file
+1718690853702	Rename resource 'view2-comment.jsp'
+1718757568823	Rename resource 'logout.jsp'
+1718757658160	Move 'logout.jsp' to 'view'
+1718759230698	Rename type 'logoutController'
+1718759314193	Delete element
+1718863685664	Rename resource 'search.jsp'
+1718940717904	Delete element
+1718945933216	Move compilation unit
+1718946054791	Move 'write.jsp' to 'feeds'
+1718946394874	Move 'write.jsp' to 'events'
+1718946471524	Delete element
+1718947629019	Rename type 'FeedController'
+1718947655808	Rename type 'FeedSaveController'

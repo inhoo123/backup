@@ -1,0 +1,48 @@
+package controller.comments;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import model.dao.CommentDao;
+import model.dao.PostDao;
+import model.vo.Comment;
+import model.vo.Post;
+
+@WebServlet("/comment-update")
+public class UdateHandle extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		try {
+			// 게시글 NO
+			PostDao postDao = new PostDao();
+			int postNo = (Integer.parseInt(req.getParameter("postNo")));
+			req.setAttribute("post", postDao.findByNo(postNo));
+			// 댓글 NO
+			CommentDao commentDao = new CommentDao();
+			Comment no = commentDao.findByNo(postNo);
+
+			String body = req.getParameter("body");
+			
+
+			Comment one = new Comment();
+			one.setNo(no);
+			one.setBody(body);
+
+			req.setAttribute("comment", commentDao.update(one));
+
+			boolean r;
+			r = commentDao.update(one);
+			if (r) {
+				resp.sendRedirect(req.getContextPath() + "/posts/view?no=" + postNo);
+			} else {
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

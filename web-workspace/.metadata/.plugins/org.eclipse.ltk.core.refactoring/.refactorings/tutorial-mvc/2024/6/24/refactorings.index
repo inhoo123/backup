@@ -1,0 +1,27 @@
+1718153122934	Move 'index.jsp' to 'WEB-INF'
+1718153127603	Move 'index.jsp' to 'webapp'
+1718153173101	Move 'index.jsp' to 'view'
+1718153380091	Move 'index.jsp' to 'WEB-INF'
+1718153601311	Move 'index.jsp' to 'webapp'
+1718154858087	Rename package 'listner'
+1718156360021	Rename type 'ELUsageController'
+1718156407777	Rename type 'ELController'
+1718156570316	Move 'study' to 'view'
+1718157200558	Move 'index.jsp' to 'view'
+1718158459542	Rename type 'Student'
+1718160121246	Rename resource 'about-el2.jsp'
+1718166782645	Copy compilation unit
+1718166828055	Copy file
+1718166944606	Rename type 'AboutJstlCoreController'
+1718170215613	Copy compilation unit
+1718170305415	Copy file
+1718171863703	Rename type 'AboutCoreController'
+1718171870873	Rename type 'AboutCore2Controller'
+1718171879173	Rename type 'AboutCoreController3'
+1718174186302	Delete element
+1718174193727	Delete element
+1718174199803	Delete element
+1718174776958	Delete element
+1718254647489	Copy files
+1718256753754	Copy package
+1718256763990	Copy compilation unit

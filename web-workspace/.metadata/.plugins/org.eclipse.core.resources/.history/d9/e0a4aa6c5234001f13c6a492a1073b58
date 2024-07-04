@@ -1,0 +1,7 @@
+package model.vo;
+
+public class Like {
+	int postNo;
+	String userId;
+	int likes;
+}

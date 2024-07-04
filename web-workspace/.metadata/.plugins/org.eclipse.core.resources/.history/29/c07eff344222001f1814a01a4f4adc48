@@ -1,0 +1,46 @@
+<%@page import="rentalbook.vo.Feed"%>
+<%@page import="rentalbook.dao.FeedDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+ int no= Integer.parseInt(request.getParameter("no"));
+ 
+
+ FeedDao feedDao= new FeedDao();	
+ Feed found=feedDao.findByNo(no);	
+
+
+%>   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>열린공간 | 동네도서관</title>
+</head>
+<link rel="stylesheet"
+	href="<%=application.getContextPath()%>/common/style.css" />
+<body>
+	<%if(found==null){ %>
+		<script>
+			window.alert("존재하지 않는 글입니다.");
+			history.go(-1);
+		</script>
+	<%}else{%>
+	<%@include file="/common/header.jsp" %>
+	<div>
+	<h2>의견 상세보기</h2>
+	<p style="text-align: right; ">
+	 열린공간 &gt; <span style="color: green">의견 상세보기</span>
+	</p>
+	<div>
+	<h3 style="text-align: center;border-bottom: 1px solid #ccc; padding:8px;" ><%=found.title()%>
+	</h3>
+	<div>
+	
+	</div>
+	</div>
+	
+	</div>
+	<%} %>	
+</body>
+</html>

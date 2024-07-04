@@ -1,0 +1,8 @@
+package controller.posts;
+
+import jakarta.servlet.annotation.WebServlet;
+
+@WebServlet("/WEB-INF/view/common/header.jsp")
+public class PostsCategoryController extends {
+
+}

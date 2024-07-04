@@ -1,0 +1,460 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* {
+	font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: lighter;
+}
+
+.gnb_bar2 {
+    position: relative;
+    min-width: 1050px;
+    background-color: #3b4890;
+    border: 1px solid #3b4890;
+    border-width: 1px 0 1px 0;
+    padding: 10px;
+}
+
+.top{
+	padding-top:100px;
+	
+}
+
+.aa{
+    font-size: 12px;
+    font-family: -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",arial,Dotum,돋움,sans-serif;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-style: normal;
+    position: relative;
+    min-width: 1050px;
+    background-color: #3b4890;
+    border: 1px solid #3b4890;
+    border-width: 1px 0 1px 0;
+}
+.gnb_bar {
+    position: relative;
+    min-width: 1050px;
+    background-color: #3b4890;
+    border: 1px solid #3b4890;
+    border-width: 1px 0 1px 0;
+    padding: 10px;
+}
+
+center{
+	margin: 0 auto;
+	
+}
+
+
+.search{
+	height: 30px;
+	width: 400px;
+	border: 4px solid #3b4890;
+	background: #ffffff;
+}
+
+
+
+.dc_logo {
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: -43px;
+    text-align: center;
+}
+.dchead {
+    position: relative;
+    width: 1000px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+body {
+	min-width: 960px;
+}
+
+.no-deco-link {
+	color: #444;
+	text-decoration: none;
+}
+
+.fs-small {
+	font-size: 0.8rem;
+}
+
+.fs-large {
+	font-size: 1.2rem;
+}
+
+.srch-bar {
+	padding: 12px;
+	border-radius: 12px;
+	font-size: 1.1rem;
+	width: 480px;
+}
+
+.login-input {
+	padding: 16px;
+	border: 1px solid #ddd;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 1.25rem;
+	border-radius: 20px;
+}
+
+/* table css ======================================== */
+.default-table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top:10px;
+}
+.border-bottom {
+	border-bottom: 1px solid #ddd;
+}
+.default-table td, .default-table th {
+	padding : 4px;
+}
+.text-center {
+	text-align: center;
+}
+
+
+
+a {
+	text-decoration: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+textare:focus, textarea:active {
+	outline: none;
+}
+
+button:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+button:active {
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+/* 영역 사이즈 클래스 */
+.container {
+	width: 1140px;
+	margin: auto;
+}
+.container2 {
+	width: 1500px;
+	margin: auto;
+}
+
+.wrap-md {
+	width: 720px;
+	margin: auto;
+}
+
+.wrap-sm {
+	width: 540px;
+	margin: auto;
+}
+
+.wrap-x-sm {
+	width: 360px;
+	margin: auto;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+/* 컴포넌트 너비 클래스 */
+.w-50 {
+	width: 50%;
+}
+
+.w-100 {
+	width: 100%;
+}
+/* 컴포넌트 테두리 클래스 */
+.border {
+	border: 1px solid #999;
+}
+
+.border-rounded {
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+/* 글씨 정렬 클래스 */
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/* 글씨 색상 클래스 */
+.warning {
+	color: orangered;
+}
+
+.info {
+	color: limegreen;
+}
+
+
+/* 뱃지 클래스 */
+.badge-info {
+	background-color:  limegreen;
+	color: white;
+	padding : 4px 8px;
+	border-radius: 4px;
+}
+.badge-warning {
+	background-color:  orangered;
+	color: white;
+	padding : 4px 8px;
+	border-radius: 4px;
+}
+.badge-dark {
+	background-color:  #333333;
+	color: white;
+	padding : 4px 8px;
+	border-radius: 4px;
+}
+
+
+.fs-1 {
+	font-size: 2rem;
+}
+
+.fs-2 {
+	font-size: 1.5rem;
+}
+
+.fs-3 {
+	font-size: 1.17rem;
+}
+
+.fs-4 {
+	font-size: 1.0rem;
+}
+
+.fs-5 {
+	font-size: 0.8rem;
+}
+
+.fs-6 {
+	font-size: 0.65rem;
+}
+/* 글씨 색상 */
+
+/* 기본 패딩 클래스 */
+.p-1 {
+	padding: 4px;
+}
+
+.p-2 {
+	padding: 8px;
+}
+
+.p-3 {
+	padding: 12px;
+}
+
+.p-4 {
+	padding: 16px;
+}
+
+.p-5 {
+	padding: 20px;
+}
+
+.px-1 {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.px-2 {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.px-3 {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.px-4 {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.px-5 {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* 기본 마진 클래스 */
+.mx-1 {
+	margin: auto 4px;
+}
+
+.mx-2 {
+	margin: auto 8px;
+}
+
+.mx-3 {
+	margin: auto 12px;
+}
+
+.mx-4 {
+	margin: auto 16px;
+}
+
+.mx-5 {
+	margin: auto 20px;
+}
+
+.my-1 {
+	margin: 4px auto;
+}
+
+.my-2 {
+	margin: 8px auto;
+}
+
+.my-3 {
+	margin: 12px auto;
+}
+
+.my-4 {
+	margin: 16px auto;
+}
+
+.my-5 {
+	margin: 20px auto;
+}
+/*
+.item {
+	box-shadow: 1px 2px 4px 1px #888888;
+}
+*/
+.item:hover {
+	background-color: #eee;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+.search {
+  position: relative;
+  width: 300px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: lighter;
+}
+
+body {
+	min-width: 960px;
+}
+
+.no-deco-link {
+	color: #444;
+	text-decoration: none;
+}
+
+.fs-small {
+	font-size: 0.8rem;
+}
+
+.fs-large {
+	font-size: 1.2rem;
+}
+
+.srch-bar {
+	padding: 12px;
+	border-radius: 12px;
+	font-size: 1.1rem;
+	width: 480px;
+}
+
+.login-input {
+	padding: 16px;
+	border: 1px solid #ddd;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 1.25rem;
+	
+}
+
+.login-input2 {
+	padding: 16px;
+	border: 1px solid #ddd;
+	background-color: #3b4890; 
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 1.25rem;
+	color:white;
+}
+
+
+/* table css ======================================== */
+.default-table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top:10px;
+}
+.border-bottom {
+	border-bottom: 1px solid #ddd;
+}
+.default-table td, .default-table th {
+	padding : 4px;
+}
+.text-center {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

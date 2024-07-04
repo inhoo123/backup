@@ -1,0 +1,38 @@
+package controller.posts;
+
+import java.io.IOException;
+import java.util.List;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import model.dao.PostDao;
+import model.vo.Comment;
+import model.vo.Post;
+
+@WebServlet("/list/category")
+public class PostsCategoryController extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		try {
+			String categroy = req.getParameter("categry");
+			PostDao postDao = new PostDao();
+			List<Post> posts = postDao.findByCategroyPosts(categroy);
+
+			boolean r = commentDao.save(one);
+			List<Comment> comments = commentDao.findAllByPostNo(postNo);
+            request.setAttribute("comments", comments);
+			
+			if (r) {
+				response.sendRedirect(request.getContextPath() + "/posts/view?no=" + postNo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		req.getRequestDispatcher("/WEB-INF/view/????/????.jsp").forward(req, resp);
+
+	}
+
+}

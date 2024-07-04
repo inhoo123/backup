@@ -1,0 +1,17 @@
+1716773333491	Move 'META-INF' to 'WEB-INF'
+1716782625694	Delete element
+1716793065268	Delete element
+1716794932524	Rename resource 'auth.jsp'
+1716794941312	Rename resource 'top.jsp'
+1716794956070	Rename resource 'auth-result.jsp'
+1716795069905	Rename resource 'Top.jsp'
+1716795076551	Rename resource 'Center.jsp'
+1716795320195	Rename resource 'top.jsp'
+1716856673604	Rename resource 'center.jsp'
+1716856845817	Delete element
+1716858201160	Move 'login.jsp' to 'example'
+1716858202633	Move 'login-result.jsp' to 'example'
+1716863974290	Rename resource 'login.jsp'
+1716864014961	Rename resource 'login-result.jsp'
+1716962928500	Rename resource 'NewFile.jsp'
+1716964168234	Rename type 'CustomListener'
